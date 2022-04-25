@@ -43,7 +43,7 @@ attachment.content_id = ContentId(atchId)
 message.attachment = attachment
 
 try:
-    sendgrid_client = SendGridAPIClient(SENDGRID_API_KEY)
+    sendgrid_client = SendGridAPIClient(sendgridApiKey)
     response = sendgrid_client.send(message)
     print('Mail sent Succesfully')
     print('Response: '+response.status_code)
