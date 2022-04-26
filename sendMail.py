@@ -46,9 +46,9 @@ try:
     sendgrid_client = SendGridAPIClient(sendgridApiKey)
     response = sendgrid_client.send(message)
     print('Mail sent Succesfully')
-    print('Response: '+response.status_code)
-    print('Response body: '+response.body)
-    print('Response Headers: '+response.headers)
+    print('Response: '+str(response.status_code))
+    print('Response body: '+str(response.body))
+    print('Response Headers: '+str(response.headers))
 except Exception as e:
     print('Error while sending Email, see exception below: ')
     print(e.message)
